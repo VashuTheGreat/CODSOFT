@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommender</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        button:disabled {
+  cursor: not-allowed;
+}
+
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 min-h-screen">
+
+<div class="max-w-4xl mx-auto py-12 px-4">
+    <h1 class="text-4xl font-bold text-center mb-8">🎬 V Movie Recommender</h1>
+
+    <form id="predictForm" class="flex flex-col md:flex-row gap-4 items-center justify-center">
+        <input list="nameList" name="name" id="nameInput"
+               class="w-full md:w-1/3 px-4 py-2 rounded-lg border border-gray-300"
+               placeholder="Enter movie name" required>
+        <datalist id="nameList">
+            {% for item in mov_name %}
+                <option value="{{ item }}">
+            {% endfor %}
+        </datalist>
+
+        <input type="number" name="num" id="numInput"
+               class="w-full md:w-1/4 px-4 py-2 rounded-lg border border-gray-300"
+               placeholder="Number of Suggestions" required>
+
+        <button id="sub"
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition">
+            Get Recommendations
+        </button>
+    </form>
+
+   <div id="result" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
+    <div class="col-span-full text-center text-gray-500" id="placeholder">
+        <p class="text-lg">No recommendations yet. Search for a movie to get suggestions.</p>
+    </div>
+</div>
+
+</div>
+
+<script>
+function sendMovieToFlask(movie) {
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = '/page';
+
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'movie';
+    input.value = JSON.stringify(movie);
+
+    form.appendChild(input);
+    document.body.appendChild(form);
+    form.submit();
+}
+
+const form = document.getElementById('predictForm');
+const resultDiv = document.getElementById('result');
+const sub = document.getElementById('sub');
+
+form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    sub.innerText = `Fetching...`;
+    sub.disabled = true;
+
+    const name = document.getElementById('nameInput').value;
+    const num = document.getElementById('numInput').value;
+
+    try {
+        const response = await fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, num })
+        });
+
+        const data = await response.json();
+        console.log('Predicted Movies:', data.prediction);
+
+        resultDiv.innerHTML = data.prediction.map(movie => {
+            const encodedMovie = encodeURIComponent(JSON.stringify(movie));
+            return `
+                <div onclick="sendMovieToFlask(JSON.parse(decodeURIComponent('${encodedMovie}')))"
+                     class="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer hover:shadow-xl transition duration-300">
+                    <img src="${movie.poster}" alt="${movie.title}" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">${movie.title}</h3>
+                    </div>
+                </div>`;
+        }).join('');
+
+    } catch (error) {
+        console.error('Error fetching predictions:', error);
+        resultDiv.innerHTML = `<p class="text-red-600 font-semibold text-center mt-6">Error fetching recommendations. Check console.</p>`;
+    }
+
+    sub.innerText = `Get Recommendations`;
+    sub.disabled = false;
+});
+</script>
+
+</body>
+</html>

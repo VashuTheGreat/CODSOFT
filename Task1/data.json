@@ -1,0 +1,90 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening", "Is anyone there?"],
+        "responses": ["Hello! Welcome to Rademate Pants 👖. How can I assist you today?", "Hi there! Ready to explore our latest pants collection?", "Hey! How can I help you find your perfect pair of Rademate Pants today?"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you", "Talk to you later", "Goodbye", "Catch you later"],
+        "responses": ["Thanks for visiting Rademate Pants. Have a great day!", "See you soon! Stay stylish with Rademate!", "Bye! Don’t forget to check our new arrivals."]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank you so much", "I appreciate it"],
+        "responses": ["You're welcome!", "Anytime! Let me know if you need help with anything else.", "Glad I could help!"]
+      },
+      {
+        "tag": "product_info",
+        "patterns": ["Tell me about Rademate Pants", "What are Rademate Pants?", "What makes your pants special?", "Why should I choose Rademate?"],
+        "responses": ["Rademate Pants are crafted with premium fabric for comfort and style — perfect for every occasion!", "Our pants offer a perfect blend of fashion, durability, and fit.", "We use high-quality materials to make pants that feel as good as they look."]
+      },
+      {
+        "tag": "product_types",
+        "patterns": ["What types of pants do you sell?", "Do you have jeans?", "Tell me about different styles", "What kind of pants do you offer?"],
+        "responses": ["We offer joggers, cargo pants, chinos, denim jeans, formal trousers, and more.", "Looking for something casual or formal? We’ve got pants for every vibe!", "Yes! From slim-fit jeans to relaxed-fit cargos — we have it all."]
+      },
+      {
+        "tag": "product_size",
+        "patterns": ["What sizes do you offer?", "Do you have XL size?", "Size options?", "Do your pants fit true to size?"],
+        "responses": ["We offer sizes from XS to XXL. Check our size guide for perfect fitting!", "Our pants follow standard sizing. Still unsure? Drop us a message for fit suggestions!"]
+      },
+      {
+        "tag": "price_range",
+        "patterns": ["How much are the pants?", "What's the price?", "Do you have budget-friendly options?", "Tell me the price range"],
+        "responses": ["Rademate Pants start from ₹999, and we have premium styles up to ₹2999.", "We offer quality at every price point — browse our collection to find your fit."]
+      },
+      {
+        "tag": "offers",
+        "patterns": ["Any discounts?", "Do you have any sales?", "Current offers?", "Any promo code?"],
+        "responses": ["Yes! Get 15% off on your first order. Use code WELCOME15.", "We’re running exclusive deals — check our website or ask me directly!"]
+      },
+      {
+        "tag": "order_status",
+        "patterns": ["Where is my order?", "Track my order", "Has my order shipped?", "Order update please"],
+        "responses": ["Please share your order ID so I can help you track it.", "Let me fetch the tracking details for you. May I have your order number?"]
+      },
+      {
+        "tag": "return_policy",
+        "patterns": ["What is your return policy?", "Can I return the pants?", "How do I return my order?"],
+        "responses": ["You can return items within 7 days of delivery — no questions asked!", "We offer easy returns. Just make sure tags are intact and pants are unworn."]
+      },
+      {
+        "tag": "delivery",
+        "patterns": ["How long does delivery take?", "Is delivery free?", "When will I get my pants?", "Tell me about delivery"],
+        "responses": ["Delivery usually takes 3-5 business days. Express options available too!", "Yes, we offer free delivery on all orders above ₹799."]
+      },
+      {
+        "tag": "store_location",
+        "patterns": ["Do you have a physical store?", "Where is your store?", "Can I visit your shop?", "Any nearby outlet?"],
+        "responses": ["We’re currently online-only, but we're working on launching a store near you!", "Our full range is available online — delivered right to your door."]
+      },
+      {
+        "tag": "small_talk",
+        "patterns": ["How are you?", "What’s up?", "You good?", "Everything fine?"],
+        "responses": ["I’m doing great, thanks! Just helping people find amazing pants!", "All good here! How can I assist you today?"]
+      },
+      {
+        "tag": "joke",
+        "patterns": ["Tell me a joke", "Make me laugh", "Say something funny"],
+        "responses": ["Why did the pants apply for a job? They wanted to make ends meet!", "I asked my pants if they liked my outfit. They said, 'We’re tight!' 😄"]
+      },
+      {
+        "tag": "brand_story",
+        "patterns": ["How did Rademate start?", "Tell me about the brand", "What’s your story?", "Who started Rademate?"],
+        "responses": ["Rademate was born out of the love for comfort and confidence. We believe everyone deserves pants that fit their story.", "Started by fashion enthusiasts, Rademate aims to redefine how pants feel and look."]
+      },
+      {
+        "tag": "contact_support",
+        "patterns": ["I need help", "Can I talk to support?", "I have an issue", "Support please"],
+        "responses": ["Sure! You can reach out at support@rademate.com or just describe your issue here.", "We’re always here to help — tell us what’s wrong."]
+      },
+      {
+        "tag": "name",
+        "patterns": ["What is your name?", "Who are you?", "Your name please?"],
+        "responses": ["I'm your Rademate Pants assistant — always here to help you look your best!", "Call me RadeBot! I’m here for all your pant-astic needs."]
+      }
+    ]
+  }
+  

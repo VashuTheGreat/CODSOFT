@@ -1,0 +1,70 @@
+text,label
+Hi,greeting
+Hello,greeting
+Hey,greeting
+Good morning,greeting
+Good evening,greeting
+Is anyone there,greeting
+Bye,goodbye
+See you,goodbye
+Talk to you later,goodbye
+Goodbye,goodbye
+Catch you later,goodbye
+Thanks,thanks
+Thank you,thanks
+That's helpful,thanks
+Thank you so much,thanks
+I appreciate it,thanks
+Tell me about Rademate Pants,product_info
+What are Rademate Pants,product_info
+What makes your pants special,product_info
+Why should I choose Rademate,product_info
+What types of pants do you sell,product_types
+Do you have jeans,product_types
+Tell me about different styles,product_types
+What kind of pants do you offer,product_types
+What sizes do you offer,product_size
+Do you have XL size,product_size
+Size options,product_size
+Do your pants fit true to size,product_size
+How much are the pants,price_range
+What's the price,price_range
+Do you have budget-friendly options,price_range
+Tell me the price range,price_range
+Any discounts,offers
+Do you have any sales,offers
+Current offers,offers
+Any promo code,offers
+Where is my order,order_status
+Track my order,order_status
+Has my order shipped,order_status
+Order update please,order_status
+What is your return policy,return_policy
+Can I return the pants,return_policy
+How do I return my order,return_policy
+How long does delivery take,delivery
+Is delivery free,delivery
+When will I get my pants,delivery
+Tell me about delivery,delivery
+Do you have a physical store,store_location
+Where is your store,store_location
+Can I visit your shop,store_location
+Any nearby outlet,store_location
+How are you,small_talk
+What’s up,small_talk
+You good,small_talk
+Everything fine,small_talk
+Tell me a joke,joke
+Make me laugh,joke
+Say something funny,joke
+How did Rademate start,brand_story
+Tell me about the brand,brand_story
+What’s your story,brand_story
+Who started Rademate,brand_story
+I need help,contact_support
+Can I talk to support,contact_support
+I have an issue,contact_support
+Support please,contact_support
+What is your name,name
+Who are you,name
+Your name please,name
