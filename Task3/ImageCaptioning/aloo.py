@@ -57,7 +57,8 @@ def predict_caption(model, image, tokenizer, max_length):
     return in_text.replace('<start>', '').replace('<end>', '').strip()
 
 
-prediction_text=predict_caption(model=model,image='./data/Images/41999070_838089137e.jpg',tokenizer=tokenizer,max_length=35)
+prediction_text=predict_caption(model=model,image='./dog.webp',tokenizer=tokenizer,max_length=35)
 result = prediction_text.split("end", 1)[0]
 print(result)
+
 
